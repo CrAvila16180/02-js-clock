@@ -79,3 +79,12 @@ body {
     margin-left: -15px;
 }
 
+@media all and (max-width: 500px){
+
+    .clock {
+        transform: scale(0.8);
+        margin: -10px;
+    }
+
+}
+
