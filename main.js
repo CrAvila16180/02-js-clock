@@ -45,9 +45,9 @@ let moveHours = (now) => {
     const hoursDegrees = ((hours/12)*360) + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
     if(hours < 10){
-        hourDisplay.textContent = `0${hours} :`;
+        hourDisplay.textContent = `0${hours} : `;
     } else{
-        hourDisplay.textContent = `${hours} :`;
+        hourDisplay.textContent = `${hours} : `;
     };
 };
 
