@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  } 
+
+
 html{
     background: #ffbf00 url(bg.png);
     background-size: cover;
-    font-family: 'helvetica neue';
+    font-family: Product Sans;
     text-align: center;
     font-size: 10px;
+    letter-spacing: 3px;
 }
 
 body {
@@ -46,4 +55,16 @@ body {
     background: #212121;
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1,2.7,0.60, 1);
+
+}
+
+.textHour {
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0 auto;
 }
