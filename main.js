@@ -14,8 +14,13 @@ let moveSeconds = (now) => {
     const seconds = now.getSeconds();
     const secondsDegrees = ((seconds/60)*360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    if(seconds < 10){
+        secondDisplay.textContent = `0${seconds}`;
+    } else{
+        secondDisplay.textContent = `${seconds}`;
+    }
    
-    secondDisplay.textContent = `${seconds}`
+    
 }
 
 let moveMinutes = (now) => {
@@ -23,7 +28,12 @@ let moveMinutes = (now) => {
     const minutesDegrees = ((minutes/60)*360) + 90;
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
     log(minutes);
-    minuteDisplay.textContent = `${minutes}:`;
+    if(minutes < 10){
+        minuteDisplay.textContent = `0${minutes} :`;
+    } else{
+        minuteDisplay.textContent = `${minutes} :`;
+    }
+   
     
 }
 
@@ -32,7 +42,11 @@ let moveHours = (now) => {
     const hoursDegrees = ((hours/12)*360) + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
     log(hours);
-    hourDisplay.textContent = `${hours}:`;
+    if(hours < 10){
+        hourDisplay.textContent = `0${hours} :`;
+    } else{
+        hourDisplay.textContent = `${hours} :`;
+    }
     
 }
 
@@ -43,7 +57,7 @@ let setDate = () => {
     moveMinutes(now);
     moveHours(now);
 
-    textHour.textContent = `${hours}:${minutes}:${seconds}`;
+    
     
 };
 

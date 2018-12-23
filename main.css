@@ -67,4 +67,14 @@ body {
     font-size: 50px;
     font-weight: bolder;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
+
+.textHour > * {
+    padding: 2.5px;
+    margin: 2.5px;
+    width: 10rem;
+    text-align: right;
+}
+
