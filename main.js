@@ -1,4 +1,4 @@
-const log = (content) => console.log(content);
+
 
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
@@ -27,7 +27,7 @@ let moveMinutes = (now) => {
     const minutes = now.getMinutes();
     const minutesDegrees = ((minutes/60)*360) + 90;
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
-    log(minutes);
+    
     if(minutes < 10){
         minuteDisplay.textContent = `0${minutes} :`;
     } else{
@@ -41,7 +41,7 @@ let moveHours = (now) => {
     const hours = now.getHours();
     const hoursDegrees = ((hours/12)*360) + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-    log(hours);
+   
     if(hours < 10){
         hourDisplay.textContent = `0${hours} :`;
     } else{
