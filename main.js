@@ -1,5 +1,3 @@
-
-const hand = document.querySelectorAll('.hand');
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
@@ -10,12 +8,6 @@ let secondDisplay = document.querySelector('#secondDisplay');
 
 let textHour = document.querySelector('.textHour');
 
-let disableTransition = (time) => {
-    if(time == 360){
-        `${time}display`.style.transition = 'none';
-    }
-}
-
 let moveSeconds = (now) => {
     const seconds = now.getSeconds();
     const secondsDegrees = ((seconds/60)*360) + 90;
@@ -24,9 +16,7 @@ let moveSeconds = (now) => {
         secondDisplay.textContent = `0${seconds}`;
     } else{
         secondDisplay.textContent = `${seconds}`;
-    }; 
-
-    
+    };   
 };
 
 let moveMinutes = (now) => {
